@@ -1,4 +1,5 @@
 # redux-effects-socket-io
+[![Build Status](https://travis-ci.org/recruit-tech/redux-effects-socket-io.svg?branch=master)](https://travis-ci.org/recruit-tech/redux-effects-socket-io)
 
 [`socket.io`](socket.io) binding for `redux-effects` family.
 
