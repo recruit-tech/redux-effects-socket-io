@@ -1,4 +1,3 @@
-import { createAction } from 'redux-actions';
 import io from 'socket.io-client';
 
 /**
@@ -6,6 +5,9 @@ import io from 'socket.io-client';
  */
 export const SOCKET_IO = 'EFFECT_SOCKET_IO';
 
+/**
+ * Action creators
+ */
 export function connect(conf) {
   return {
     type: SOCKET_IO,
@@ -65,16 +67,14 @@ export default function socketioMiddleware(config) {
   let socket = null;
   return ({ dispatch }) => (next) => (action) => {
     if (action.type !== SOCKET_IO) {
-      return next(action);
+      return void next(action);
     }
 
     switch (action.payload.operation) {
       case 'connect':
-        const conf = Object.assign(action.payload.conf, config);
         if (!socket) {
-          socket = io(hostname, conf);
+          socket = io(hostname, Object.assign(action.payload.conf, config));
         }
-
         break;
       case 'disconnect':
         if (!socket) {
@@ -104,6 +104,8 @@ export default function socketioMiddleware(config) {
         }
 
         socket.send(action.payload.data);
+        break;
+      default:
         break;
     }
   };
