@@ -1,60 +1,60 @@
 {
   "name": "redux-effects-socket-io",
-  "version": "1.0.0",
   "description": "socket.io bindings for redux-effects family",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "babel src --out-dir lib",
-    "clean": "rimraf lib/*",
-    "eslint": "eslint src test",
-    "fixpack": "fixpack",
-    "lint": "npm-run-all eslint",
-    "preversion": "npm test",
-    "test": "eater",
-    "version": "npm-run-all clean build"
+  "version": "1.0.0",
+  "author": "yosuke-furukawa",
+  "bugs": {
+    "url": "https://github.com/recruit-tech/redux-effects-socket-io/issues"
   },
+  "dependencies": {
+    "socket.io-client": "^1.7.3"
+  },
+  "devDependencies": {
+    "active-cache-babel-register": "0.1.3",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-power-assert": "1.0.0",
+    "babel-register": "6.24.1",
+    "eater": "3.2.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-dependencies": "2.3.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.10.3",
+    "fixpack": "2.3.1",
+    "must-call": "1.0.0",
+    "npm-run-all": "4.0.2",
+    "plz-port": "1.0.0",
+    "power-assert": "1.4.2",
+    "redux": "3.6.0",
+    "redux-actions": "2.0.2",
+    "rimraf": "2.6.1",
+    "socket.io": "1.7.3"
+  },
+  "homepage": "https://github.com/recruit-tech/redux-effects-socket-io#readme",
+  "keywords": [
+    "effects",
+    "redux",
+    "socket.io",
+    "steps",
+    "websocket"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recruit-tech/redux-effects-socket-io.git"
   },
-  "keywords": [
-    "socket.io",
-    "redux",
-    "effects",
-    "steps",
-    "websocket"
-  ],
-  "author": "yosuke-furukawa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/recruit-tech/redux-effects-socket-io/issues"
-  },
-  "homepage": "https://github.com/recruit-tech/redux-effects-socket-io#readme",
-  "dependencies": {
-    "redux-actions": "^0.12.0",
-    "socket.io-client": "^1.4.8"
-  },
-  "devDependencies": {
-    "active-cache-babel-register": "^0.1.3",
-    "babel-cli": "^6.14.0",
-    "babel-core": "^6.14.0",
-    "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-es2016": "^6.11.3",
-    "babel-preset-power-assert": "^1.0.0",
-    "babel-register": "^6.14.0",
-    "eater": "^3.0.0-5",
-    "eslint": "^3.4.0",
-    "eslint-config-airbnb": "^10.0.1",
-    "eslint-plugin-import": "^1.14.0",
-    "eslint-plugin-jsx-a11y": "^2.2.1",
-    "eslint-plugin-react": "^6.2.0",
-    "must-call": "^1.0.0",
-    "npm-run-all": "^3.1.0",
-    "plz-port": "^1.0.0",
-    "power-assert": "^1.4.1",
-    "redux": "^3.6.0",
-    "rimraf": "^2.5.4",
-    "socket.io": "^1.4.8"
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib/*",
+    "fixpack": "fixpack",
+    "lint": "eslint src test",
+    "preversion": "npm test",
+    "test": "eater",
+    "version": "npm-run-all clean build"
   }
 }
