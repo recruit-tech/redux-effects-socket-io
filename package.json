@@ -1,7 +1,7 @@
 {
   "name": "redux-effects-socket-io",
   "description": "socket.io bindings for redux-effects family",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "yosuke-furukawa",
   "bugs": {
     "url": "https://github.com/recruit-tech/redux-effects-socket-io/issues"
