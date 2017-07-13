@@ -8,7 +8,7 @@ export const SOCKET_IO = 'EFFECT_SOCKET_IO';
 /**
  * Action creators
  */
-export function connect(conf) {
+export function connect(conf = {}) {
   return {
     type: SOCKET_IO,
     payload: {
@@ -59,6 +59,16 @@ export function on(event, listenerAction) {
   };
 }
 
+export function off(event) {
+  return {
+    type: SOCKET_IO,
+    payload: {
+      operation: 'off',
+      event,
+    },
+  };
+}
+
 /**
  * socket.io middleware
  */
@@ -104,6 +114,13 @@ export default function socketioMiddleware(config) {
         }
 
         socket.send(action.payload.data);
+        break;
+      case 'off':
+        if (!socket) {
+          throw new Error('need to connect first');
+        }
+
+        socket.off(action.payload.event);
         break;
       default:
         break;
