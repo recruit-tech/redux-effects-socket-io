@@ -48,6 +48,10 @@
     "type": "git",
     "url": "git+https://github.com/recruit-tech/redux-effects-socket-io.git"
   },
+  "files": [
+    "lib",
+    "src"
+  ],  
   "scripts": {
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib/*",
