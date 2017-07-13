@@ -7,6 +7,11 @@ export default (port) => {
       io.emit('message', msg);
     });
 
+    socket.on('message2', (msg) => {
+      io.emit('message2', msg);
+    });
+
+
     socket.on('disconnect', () => {
       io.emit('disconnected');
     });
