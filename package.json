@@ -1,7 +1,7 @@
 {
   "name": "redux-effects-socket-io",
   "description": "socket.io bindings for redux-effects family",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "yosuke-furukawa",
   "bugs": {
     "url": "https://github.com/recruit-tech/redux-effects-socket-io/issues"
@@ -51,7 +51,7 @@
   "files": [
     "lib",
     "src"
-  ],  
+  ],
   "scripts": {
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib/*",
