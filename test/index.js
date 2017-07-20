@@ -114,3 +114,16 @@ test('message off test', (done) => {
   });
 });
 
+test('another action', (done) => {
+  const store = createStore(
+    () => null,
+    {},
+    applyMiddleware(socketioMiddleware({
+      hostname: 'http://localhost',
+    })),
+  );
+
+  const action = { type: 'FOO', payload: { data: 0 } };
+  const result = store.dispatch(action);
+  assert.strictEqual(result, action);
+});

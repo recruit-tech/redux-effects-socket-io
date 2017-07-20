@@ -77,7 +77,7 @@ export default function socketioMiddleware(config) {
   let socket = null;
   return ({ dispatch }) => (next) => (action) => {
     if (action.type !== SOCKET_IO) {
-      return void next(action);
+      return next(action);
     }
 
     switch (action.payload.operation) {
@@ -125,5 +125,6 @@ export default function socketioMiddleware(config) {
       default:
         break;
     }
+    return action;
   };
 }
